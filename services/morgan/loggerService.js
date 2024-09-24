@@ -12,6 +12,7 @@ const morganLogger = () => {
       `[${now.year}/${now.month}/${now.day} ${now.hours}:${now.minutes}:${now.seconds}]`,
       tokens.method(req, res),
       tokens.url(req, res),
+      req.ip,
       tokens.status(req, res), '-',
       tokens['response-time'](req, res), 'ms'
     ].join(' ');
