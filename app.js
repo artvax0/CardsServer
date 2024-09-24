@@ -8,7 +8,7 @@ import chalk from "chalk";
 import logRequests from "./services/morgan/loggerService.js";
 import currentTime from "./utils/timeFormats.js";
 
-const PORT = 8181;
+const PORT = process.env.PORT || 8181;
 
 const app = express();
 app.use(cors);
